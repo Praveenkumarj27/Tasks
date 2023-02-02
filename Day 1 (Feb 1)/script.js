@@ -23,15 +23,20 @@
 //    * Objects
 //    * Classes
 //    * Encapsulation
-//    * Inhertance
+//    * Inhertance   
+//    * Polymorphism
+//    * Abstarction
+//    * Message passing
+//    * Reusability
 
 
 // Features of Functional Programming:-
-//      JavaScript has the most important features needed for functional programming: 
-//   *First class functions: 
-//   *The ability to use functions as data values: 
-//   *pass functions as arguments, 
-//   *return functions,and assign functions to variables and object properties
+
+//   *First class functions:  
+//   *Pass functions as arguments, 
+//   *Returned from a functions,and assign functions to variables.
+
+
 
 
 
