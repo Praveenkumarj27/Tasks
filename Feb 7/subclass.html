@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <title>SubClass</title>
+    <link rel="Fav icon" href="images/favicon.ico" />
+  </head>
+  <body>
+    <p>SubClass</p>
+    <script>
+      //Base Class
+      var Contact = function (fname, lname) {
+        this.fname = fname;
+        this.lname = lname;
+        console.log("contact called");
+      };
+      // Contact.prototype.DisplayName = function () {
+      //   console.log(`${this.fname} ${this.lname}`);
+      // };
+
+      //SubClass
+      var EmailContact = function (fname, lname, email) {
+        Contact.call(this, fname, lname);
+        //this.fname = fname;
+        //this.lname = lname;
+        this.email = email;
+      };
+
+      EmailContact.prototype = Object.create(Contact.prototype); //we are assigning prototype value of contact constructor to the email contact
+      EmailContact.prototype.constructor = EmailContact; //  if we dont assign the constructor value to the subclass then it will inherit constructor of parent
+
+      console.log(EmailContact.prototype);
+
+      EmailContact.prototype.DisplayName = function () {
+        console.log(`${this.fname} ${this.lname} ${this.email}`);
+      };
+
+      var contact1 = new EmailContact("Ajay", "Krishna", "ajay@gmail.com");
+      console.log(contact1.DisplayName());
+    </script>
+  </body>
+</html>
